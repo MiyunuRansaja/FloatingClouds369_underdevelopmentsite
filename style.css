@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(rgba(250, 21, 162, 0.364), rgba(31, 139, 255, 0.408)), url('CloudsConvert_high-1713334713.jpg') center center/cover no-repeat;
+}
+
+.wrapper {
+  list-style: none;
+  display: flex;
+  margin-left: -40px; 
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  left: -4%;
+  font-size: 15px;
+  background: #ffffff;
+  color: #000000; 
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px; 
+  width: 8px; 
+  background: none; 
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+}
+
+.wrapper .icon * {
+  color: #000000 !important;
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover .tooltip,
+.wrapper .icon:hover .tooltip::before {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #CD201F;
+  color: #ffffff;
+}
